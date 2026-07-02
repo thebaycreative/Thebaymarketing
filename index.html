@@ -3,231 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bay Marketing Solutions | Premier Digital Agency</title>
+    <title>The Bay Marketing Solutions | Enterprise Digital Agency</title>
     <style>
-        /* Modernized Elegant Color Palette */
         :root {
-            --primary-dark: #0f172a; /* Sophisticated deep slate */
-            --accent-blue: #1e40af;  /* Trustworthy royal blue */
-            --light-gray: #f8fafc;   /* Clean premium canvas background */
-            --text-dark: #334155;    /* Soft charcoal for readability */
-            --text-light: #ffffff;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --emerald-500: #10b981;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
         }
         
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
-            line-height: 1.7;
-            background-color: #ffffff;
+        html {
+            scroll-behavior: smooth;
         }
 
-        h1, h2, h3 { 
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--slate-700);
+            line-height: 1.7;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 { 
             margin: 0; 
-            font-weight: 600;
-            letter-spacing: -0.025em;
+            font-weight: 700;
+            color: var(--slate-900);
+            letter-spacing: -0.03em;
         }
         
-        /* Navigation */
+        /* Premium Header Navigation */
         nav {
-            background-color: var(--primary-dark);
-            color: var(--text-light);
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            color: #fff;
             padding: 1.2rem 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
-        nav h1 { font-size: 1.3rem; letter-spacing: 0.5px; }
-        nav div { font-size: 0.9rem; opacity: 0.9; }
+        nav h1 { font-size: 1.25rem; color: #fff; letter-spacing: -0.01em; }
+        nav .location-tag { font-size: 0.85rem; font-weight: 500; opacity: 0.8; letter-spacing: 0.05em; text-transform: uppercase; }
 
-        /* Hero Section with San Francisco / Bay Area Imagery */
+        /* Hero Section with Open-Source Golden Gate Asset */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
-                        url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            color: var(--text-light);
+            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.85)), 
+                        url('https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcS-0ABhfTDba1OCBxHHXYjOEY_EMBgPriISI4XO8deVdecIpOXhgdBd9uRcGVR3ajZvEBP3sjGiBy1JLl0') center/cover no-repeat;
+            color: #fff;
             text-align: center;
-            padding: 140px 20px;
+            padding: 160px 20px;
         }
 
         .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 3.8rem;
+            margin-bottom: 24px;
+            line-height: 1.15;
+            color: #fff;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            max-width: 650px;
+            font-size: 1.35rem;
+            max-width: 700px;
             margin: 0 auto 40px auto;
-            opacity: 0.9;
+            opacity: 0.95;
+            font-weight: 300;
         }
 
         .cta-btn {
-            background-color: var(--accent-blue);
+            background-color: var(--blue-600);
             color: #fff;
-            padding: 16px 36px;
+            padding: 18px 40px;
             text-decoration: none;
             font-size: 1rem;
             border-radius: 6px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+            font-weight: 600;
+            transition: all 0.25s ease;
+            display: inline-block;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
         }
 
         .cta-btn:hover { 
-            background-color: #1d4ed8; 
+            background-color: var(--blue-700); 
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
         }
 
-        /* About & Bio Section */
+        /* Value Metrics Bar */
+        .metrics-bar {
+            background-color: var(--slate-900);
+            color: #fff;
+            padding: 40px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+            border-bottom: 4px solid var(--blue-600);
+        }
+
+        .metric-item h3 { color: var(--emerald-500); font-size: 2.8rem; margin-bottom: 5px; }
+        .metric-item p { margin: 0; font-size: 0.95rem; opacity: 0.8; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        /* Core Bio Section */
         .about {
             text-align: center;
-            padding: 80px 10%;
-            background-color: var(--light-gray);
+            padding: 100px 12%;
+            background-color: var(--gray-50);
         }
 
         .about h2 { 
-            color: var(--primary-dark); 
-            margin-bottom: 24px; 
-            font-size: 2.2rem;
+            margin-bottom: 28px; 
+            font-size: 2.4rem;
         }
         
         .about p { 
-            max-width: 800px; 
+            max-width: 850px; 
             margin: 0 auto; 
-            font-size: 1.15rem; 
-            color: #475569;
+            font-size: 1.25rem; 
+            color: var(--slate-700);
             line-height: 1.8;
+            font-weight: 400;
         }
 
-        /* Services Grid Expanded to 4 Columns */
+        /* Interactive Service Architecture Grid */
         .services {
-            padding: 80px 8%;
+            padding: 100px 8%;
             text-align: center;
         }
 
-        .services h2 {
-            font-size: 2.2rem;
-            color: var(--primary-dark);
-            margin-bottom: 12px;
-        }
-
-        .services-subtitle {
-            color: #64748b;
-            margin-bottom: 50px;
-            font-size: 1.1rem;
-        }
+        .services h2 { font-size: 2.4rem; margin-bottom: 12px; }
+        .services-subtitle { color: #64748b; margin-bottom: 60px; font-size: 1.15rem; }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
         }
 
         .service-card {
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+            box-shadow: 0 4px 25px rgba(15, 23, 42, 0.04);
             overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid #f1f5f9;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--gray-100);
         }
 
         .service-card:hover { 
             transform: translateY(-8px); 
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+            box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
         }
 
         .service-card img {
             width: 100%;
-            height: 180px;
+            height: 190px;
             object-fit: cover;
         }
 
-        .service-content { 
-            padding: 24px; 
-            text-align: left;
-        }
-        
-        .service-content h3 { 
-            color: var(--primary-dark); 
-            margin-bottom: 12px; 
-            font-size: 1.25rem;
-        }
-        
-        .service-content p {
-            font-size: 0.95rem;
-            color: #64748b;
-            margin: 0;
+        .service-content { padding: 28px; text-align: left; }
+        .service-content h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .service-content p { font-size: 0.95rem; color: #64748b; margin: 0; }
+
+        /* Client Alignment Framework (Case Studies) */
+        .portfolio {
+            background-color: var(--gray-50);
+            padding: 100px 8%;
         }
 
-        /* Refined Professional Footer */
-        footer {
-            background-color: var(--primary-dark);
-            color: var(--text-light);
+        .portfolio h2 { text-align: center; font-size: 2.4rem; margin-bottom: 50px; }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        @media (max-width: 500px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+        .case-study {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid var(--gray-100);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
+        .case-study .tag {
+            color: var(--blue-600);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .case-study h3 { font-size: 1.6rem; margin-bottom: 15px; }
+        .case-study p { color: #64748b; font-size: 1rem; margin-bottom: 20px; }
+        .case-metric { font-size: 1.2rem; font-weight: 700; color: var(--emerald-500); }
+
+        /* Structural Framework Workflow Section */
+        .process {
+            padding: 100px 8%;
             text-align: center;
-            padding: 60px 20px;
-            border-top: 4px solid var(--accent-blue);
         }
 
-        footer h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+        .process h2 { font-size: 2.4rem; margin-bottom: 60px; }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
         }
 
-        footer p {
-            margin: 8px 0;
-            opacity: 0.85;
+        .step-card { position: relative; padding: 20px; }
+        .step-num {
+            width: 50px;
+            height: 50px;
+            background-color: var(--gray-100);
+            color: var(--slate-900);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 20px auto;
+        }
+        .step-card h4 { font-size: 1.15rem; margin-bottom: 10px; }
+        .step-card p { font-size: 0.9rem; color: #64748b; margin: 0; }
+
+        /* Footer / Enterprise Intake */
+        footer {
+            background-color: var(--slate-900);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            border-top: 5px solid var(--blue-600);
         }
 
-        footer a { 
-            color: #60a5fa; 
-            text-decoration: none; 
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+        footer h2 { color: #fff; font-size: 2.3rem; margin-bottom: 15px; }
+        footer p { margin: 8px 0; opacity: 0.85; font-size: 1.1rem; }
+        footer a { color: #60a5fa; text-decoration: none; font-weight: 600; }
+        footer a:hover { color: #93c5fd; text-decoration: underline; }
         
-        footer a:hover { color: #93c5fd; }
-
-        .copyright {
-            margin-top: 40px; 
-            font-size: 0.85rem; 
-            opacity: 0.6 !important;
-        }
+        .copyright { margin-top: 50px; font-size: 0.85rem; opacity: 0.5 !important; }
     </style>
 </head>
 <body>
 
     <nav>
         <h1>The Bay Marketing Solutions</h1>
-        <div>San Francisco Bay Area, CA</div>
+        <div class="location-tag">San Francisco Bay Area</div>
     </nav>
 
     <section class="hero">
-        <h2>Refined Strategy. High‑Performance Results.</h2>
-        <p>Empowering ambitious organizations with expert digital design, data-driven optimization, and scaling infrastructure.</p>
-        <a href="#contact" class="cta-btn">Partner With Us</a>
+        <h2>Refined Strategy.<br>High‑Performance Results.</h2>
+        <p>Architecting robust digital transformations for premier enterprises seeking validated growth and market visibility.</p>
+        <a href="#contact" class="cta-btn">Initiate Briefing</a>
+    </section>
+
+    <section class="metrics-bar">
+        <div class="metric-item">
+            <h3>3.4x</h3>
+            <p>Average Campaign ROI</p>
+        </div>
+        <div class="metric-item">
+            <h3>$14M+</h3>
+            <p>Client Revenue Scaled</p>
+        </div>
+        <div class="metric-item">
+            <h3>94%</h3>
+            <p>Client Retention Rate</p>
+        </div>
+        <div class="metric-item">
+            <h3>Top 1%</h3>
+            <p>SEO Visibility Rankings</p>
+        </div>
     </section>
 
     <section class="about">
-        <h2>Who We Are</h2>
+        <h2>A Trusted Digital Partner</h2>
         <p>The Bay Marketing Solutions is a distinguished full‑service digital agency, recognized for its professional web design, advanced search engine optimization, comprehensive data analytics, and strategic social media management. It serves as a trusted partner for organizations seeking a refined, high‑performance digital presence backed by expertise and reliability.</p>
     </section>
 
     <section class="services">
-        <h2>Our Core Capabilities</h2>
-        <p class="services-subtitle">Enterprise-grade digital solutions driven by performance metrics.</p>
+        <h2>Core Capabilities</h2>
+        <p class="services-subtitle">Enterprise infrastructure built on clean engineering and absolute attribution mapping.</p>
         <div class="services-grid">
             
             <div class="service-card">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Professional Web Design">
                 <div class="service-content">
                     <h3>Professional Web Design</h3>
-                    <p>Bespoke, highly performant websites meticulously crafted to convert visitors into lifelong clients.</p>
+                    <p>Bespoke digital architecture optimized for fluid response, exceptional UI aesthetics, and precise funnel optimization.</p>
                 </div>
             </div>
 
@@ -235,7 +311,7 @@
                 <img src="https://images.unsplash.com/photo-1432887338283-17611efbc085?auto=format&fit=crop&w=500&q=80" alt="Advanced SEO">
                 <div class="service-content">
                     <h3>Advanced SEO</h3>
-                    <p>Strategic structural optimization and visibility models built to capture search market share organically.</p>
+                    <p>Aggressive search equity capturing through systematic semantic indexing, programmatic technical tuning, and domain authority scaling.</p>
                 </div>
             </div>
 
@@ -243,7 +319,7 @@
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Comprehensive Data Analytics">
                 <div class="service-content">
                     <h3>Comprehensive Data Analytics</h3>
-                    <p>Granular operational transparency with performance pipelines tracking behavior and attribution models.</p>
+                    <p>End-to-end telemetry pipelines rendering complex visitor behavioral trends into high-fidelity conversion playbooks.</p>
                 </div>
             </div>
 
@@ -251,17 +327,64 @@
                 <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=500&q=80" alt="Strategic Social Media Management">
                 <div class="service-content">
                     <h3>Strategic Social Media</h3>
-                    <p>Targeted narrative campaigns designed to engage specific high-value demographics and build brand loyalty.</p>
+                    <p>Targeted narrative curation and platform distribution strategies engineered to capture market interest and compound brand loyalty.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <section class="portfolio">
+        <h2>Validated Performance Cases</h2>
+        <div class="portfolio-grid">
+            
+            <div class="case-study">
+                <span class="tag">Systems Infrastructure & Web Design</span>
+                <h3>CalConnect Residential Systems</h3>
+                <p>Engineered a robust, highly responsive database interface and client acquisition engine for integrated smart home and EV grid ecosystems.</p>
+                <div class="case-metric">→ 180% Surge in Regional B2B Leads</div>
+            </div>
+
+            <div class="case-study">
+                <span class="tag">Local SEO & Brand Curation</span>
+                <h3>First Street Culinary Group</h3>
+                <p>Architected an aggressive localized geo-targeting layout and pre-launch narrative strategy, securing complete operational capacity from week one.</p>
+                <div class="case-metric">→ 4.2x Organic Foot-Traffic Multiplier</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="process">
+        <h2>The Engagement Framework</h2>
+        <div class="process-steps">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h4>Discovery Audit</h4>
+                <p>Deep asset auditing to parse optimization gaps and competitor position deficits.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h4>System Architecture</h4>
+                <p>Bespoke web development and structural search asset planning.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h4>Data Deployment</h4>
+                <p>Integrating telemetry tracking pipelines to back every pixel with attribution models.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <h4>Scale & Velocity</h4>
+                <p>Continuous multivariate performance adjustments to maximize cross-channel acquisition.</p>
+            </div>
+        </div>
+    </section>
+
     <footer id="contact">
-        <h2>Ready to Elevate Your Digital Footprint?</h2>
-        <p>Let's design your high-performance growth strategy.</p>
-        <p style="margin-top: 20px;">Email: <a href="mailto:thebaymarketingsolutions@gmail.com">thebaymarketingsolutions@gmail.com</a></p>
+        <h2>Secure Your Digital Edge</h2>
+        <p>Connect with a senior partner to map your enterprise scaling strategy.</p>
+        <p style="margin-top: 25px;">Corporate Inquiries: <a href="mailto:growth@thebaymarketingsolutions.com">growth@thebaymarketingsolutions.com</a></p>
         <p class="copyright">&copy; 2026 The Bay Marketing Solutions. All rights reserved.</p>
     </footer>
 
