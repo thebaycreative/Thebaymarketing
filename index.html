@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bay Marketing Solutions | Premier Digital Agency</title>
+    <style>
+        /* Modernized Elegant Color Palette */
+        :root {
+            --primary-dark: #0f172a; /* Sophisticated deep slate */
+            --accent-blue: #1e40af;  /* Trustworthy royal blue */
+            --light-gray: #f8fafc;   /* Clean premium canvas background */
+            --text-dark: #334155;    /* Soft charcoal for readability */
+            --text-light: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: #ffffff;
+        }
+
+        h1, h2, h3 { 
+            margin: 0; 
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav h1 { font-size: 1.3rem; letter-spacing: 0.5px; }
+        nav div { font-size: 0.9rem; opacity: 0.9; }
+
+        /* Hero Section with San Francisco / Bay Area Imagery */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: var(--text-light);
+            text-align: center;
+            padding: 140px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            background-color: var(--accent-blue);
+            color: #fff;
+            padding: 16px 36px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+        }
+
+        .cta-btn:hover { 
+            background-color: #1d4ed8; 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+        }
+
+        /* About & Bio Section */
+        .about {
+            text-align: center;
+            padding: 80px 10%;
+            background-color: var(--light-gray);
+        }
+
+        .about h2 { 
+            color: var(--primary-dark); 
+            margin-bottom: 24px; 
+            font-size: 2.2rem;
+        }
+        
+        .about p { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            font-size: 1.15rem; 
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        /* Services Grid Expanded to 4 Columns */
+        .services {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .services-subtitle {
+            color: #64748b;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .service-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-content { 
+            padding: 24px; 
+            text-align: left;
+        }
+        
+        .service-content h3 { 
+            color: var(--primary-dark); 
+            margin-bottom: 12px; 
+            font-size: 1.25rem;
+        }
+        
+        .service-content p {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Refined Professional Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 4px solid var(--accent-blue);
+        }
+
+        footer h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            margin: 8px 0;
+            opacity: 0.85;
+        }
+
+        footer a { 
+            color: #60a5fa; 
+            text-decoration: none; 
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        footer a:hover { color: #93c5fd; }
+
+        .copyright {
+            margin-top: 40px; 
+            font-size: 0.85rem; 
+            opacity: 0.6 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>The Bay Marketing Solutions</h1>
+        <div>San Francisco Bay Area, CA</div>
+    </nav>
+
+    <section class="hero">
+        <h2>Refined Strategy. High‑Performance Results.</h2>
+        <p>Empowering ambitious organizations with expert digital design, data-driven optimization, and scaling infrastructure.</p>
+        <a href="#contact" class="cta-btn">Partner With Us</a>
+    </section>
+
+    <section class="about">
+        <h2>Who We Are</h2>
+        <p>The Bay Marketing Solutions is a distinguished full‑service digital agency, recognized for its professional web design, advanced search engine optimization, comprehensive data analytics, and strategic social media management. It serves as a trusted partner for organizations seeking a refined, high‑performance digital presence backed by expertise and reliability.</p>
+    </section>
+
+    <section class="services">
+        <h2>Our Core Capabilities</h2>
+        <p class="services-subtitle">Enterprise-grade digital solutions driven by performance metrics.</p>
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Professional Web Design">
+                <div class="service-content">
+                    <h3>Professional Web Design</h3>
+                    <p>Bespoke, highly performant websites meticulously crafted to convert visitors into lifelong clients.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1432887338283-17611efbc085?auto=format&fit=crop&w=500&q=80" alt="Advanced SEO">
+                <div class="service-content">
+                    <h3>Advanced SEO</h3>
+                    <p>Strategic structural optimization and visibility models built to capture search market share organically.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Comprehensive Data Analytics">
+                <div class="service-content">
+                    <h3>Comprehensive Data Analytics</h3>
+                    <p>Granular operational transparency with performance pipelines tracking behavior and attribution models.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=500&q=80" alt="Strategic Social Media Management">
+                <div class="service-content">
+                    <h3>Strategic Social Media</h3>
+                    <p>Targeted narrative campaigns designed to engage specific high-value demographics and build brand loyalty.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Ready to Elevate Your Digital Footprint?</h2>
+        <p>Let's design your high-performance growth strategy.</p>
+        <p style="margin-top: 20px;">Email: <a href="mailto:growth@thebaymarketingsolutions.com">growth@thebaymarketingsolutions.com</a></p>
+        <p class="copyright">&copy; 2026 The Bay Marketing Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
